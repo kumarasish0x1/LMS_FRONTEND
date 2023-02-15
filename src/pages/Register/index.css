@@ -1,0 +1,124 @@
+.registration-page-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #3659A2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.registration-form-container {
+    padding: 0 120px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.registration-form .input-field {
+    margin-bottom: 10px;
+}
+
+.registration-form .input-field .input {
+    width: 100%;
+    min-width: 220px;
+    padding: 5px 12px;
+    padding-left: 13px;
+    border-radius: 4px;
+    border: none;
+    background: #eeeeee;
+    font-size: 12px;
+}
+
+.registration-form .input-field .ant-input {
+    background-color: #eeeeee !important;
+}
+
+.registration-form .input-field .ant-input-affix-wrapper-focused {
+    box-shadow: 0 0 0 2px rgb(6 6 6 / 18%) !important;
+}
+
+.registration-form .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3aaf9f;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-submit-button {
+	background: none;
+	color: white;
+	border-style: none;
+	border-color: none;
+	text-shadow: none;
+}
+
+.login-text {
+    font-size: 12px;
+    margin: 7px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-text a {
+    color: rgb(42, 115, 204) !important;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    color: rgb(24, 89, 169);
+    text-decoration: underline;
+}
+
+.site-form-item-icon {
+    padding-right: 4px;
+}
+
+.btn-submit {
+    margin-top: 14px;
+    width: 100%;
+    background-color: #3aaf9f;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    height: 30px;
+}
+
+.error-message {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #f1929238;
+    border-radius: 3px;
+    color: red;
+    border: 1px solid #f37d7d59;
+}
+
+.success-message {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #b4d9b466;
+    border-radius: 3px;
+    color: green;
+    border: 1px solid #9fd39f;
+}
+
+.ant-form-item-explain-error {
+    font-size: 11px;
+}

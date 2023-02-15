@@ -1,0 +1,7 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: inherit;
+    min-height: 435px;
+}

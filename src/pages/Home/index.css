@@ -1,0 +1,34 @@
+.container {
+    background-color: #3659A2;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+    font-size: 70px;
+}
+
+.navigation {
+    align-self: flex-end;
+    padding: 15px 40px;
+}
+
+.navigation a {
+    padding: 0 12px;
+}
+
+.login-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ant-btn-primary {
+    background-color: #3aaf9f;
+}

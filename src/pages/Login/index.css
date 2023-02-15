@@ -1,0 +1,56 @@
+.login-page-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #3659A2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form-container {
+    padding: 0 120px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.password-field .ant-form-item {
+    margin: 0 !important;
+}
+
+.forgot-password a {
+    font-size: 11px;
+    color: rgb(42, 115, 204) !important;
+}
+
+.forgot-password a:hover {
+    color: rgb(24, 89, 169);
+    text-decoration: underline;
+}
+
+#login-form .password-field {
+    margin-bottom: 3px;
+}
+
+.signup-text {
+    font-size: 12px;
+    margin: 7px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.signup-text a {
+    color: rgb(42, 115, 204) !important;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    color: rgb(24, 89, 169);
+    text-decoration: underline;
+}
