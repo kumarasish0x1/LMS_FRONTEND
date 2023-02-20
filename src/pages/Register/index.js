@@ -27,9 +27,6 @@ async function postData(url = '', data = {}) {
     });
 
     let responseCode = await response.json()
-    if (response.status !== 200) {
-        throw responseCode;
-    }
     return responseCode;
 }
 
@@ -40,13 +37,17 @@ const Register = () => {
 
     const onFinish = (userDetail) => {
         postData('http://localhost:8000/user/register', userDetail)
-        .then((data) => {
-            setError(false);
-            setSuccess(true);
-            
-            setTimeout(() => {
-                window.location.href = "/login";
-            }, 2000);
+        .then((response) => {
+            if (response.status === "success") {
+                setError(false);
+                setSuccess(true);
+                
+                setTimeout(() => {
+                    window.location.href = "/login";
+                }, 2000);
+            } else {
+                throw new Error(response.message);
+            }
         })
         .catch((err) => {
             setSuccess(false);
