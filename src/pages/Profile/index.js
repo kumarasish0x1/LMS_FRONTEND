@@ -1,52 +1,21 @@
-import { useEffect, useState } from "react";
-
-async function getData(url = '') {
-    const response = await fetch(url, {
-        credentials: 'include'
-    });
-    let responseCode = await response.json();
-    return responseCode;
-}
+import React from 'react';
+import MainLayout from '../../components/common/MainLayout';
+import HeaderComponent from '../../components/common/Header';
 
 const Profile = () => {
-    let [authenticate, setAuthenticate] = useState(false);
-    let [loading, setLoading] = useState(true);
+  const mainContent = (
+    <div>
+      {/* Your main content goes here */}
+      <p>This is the main content of the website.</p>
+    </div>
+  );
 
-    useEffect(() => {
-        getData("http://localhost:8000/check-auth")
-        .then((response) => {
-            console.log(response);
-            if (response.status === "success") {
-                setAuthenticate(true);
-                setLoading(false);
-            }
-        })
-        .catch((err) => {
-            setLoading(false);
-        })
-    }, []);
-
-    let profile = <div>Profile</div>;
-    let showError = <div>You are not Authenticate.</div>
-
-    console.log(authenticate);
-    if (!loading) {
-        if (authenticate) {
-            return (
-                <>
-                    { profile }
-                </>
-            );
-        }
-    
-        return (
-            <>
-                { showError }
-            </>
-        )
-    } else {
-        return <div>Loading...</div>
-    }
-}
+  return (
+    <MainLayout 
+        headerContent={<HeaderComponent />} 
+        mainContent={mainContent} 
+    />
+  );
+};
 
 export default Profile;

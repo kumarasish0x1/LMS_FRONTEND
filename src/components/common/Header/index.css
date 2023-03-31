@@ -1,0 +1,57 @@
+.ant-layout-header {
+    height: 50px !important;
+    color: #fff !important;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+.name-placeholder {
+    margin-right: 4px;
+    color: #fff;
+  }
+  
+.user-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #119ff1;
+    color: #fff;
+    margin-left: 4px;
+}
+
+.user-icon {
+    font-size: 18px;
+}
+
+.custom-icon {
+    margin-bottom: 2px;
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+}
+  
+  
+  
+  

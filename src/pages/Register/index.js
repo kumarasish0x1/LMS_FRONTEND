@@ -10,25 +10,8 @@ import { Button, Input, Form } from 'antd';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
-
-// need to have a separate location
-async function postData(url = '', data = {}) {
-    const response = await fetch(url, {
-      method: 'POST',
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer',
-      body: JSON.stringify(data)
-    });
-
-    let responseCode = await response.json()
-    return responseCode;
-}
+import withGuest from '../../hocs/withGuest';
+import fetchAPI from "../../utils/api";
 
 const Register = () => {
     let successMessage = <div className='success-message'>Registration Successful</div>;
@@ -36,7 +19,7 @@ const Register = () => {
     let [error, setError] = useState(false);
 
     const onFinish = (userDetail) => {
-        postData('http://localhost:8000/user/register', userDetail)
+        fetchAPI("/auth/register", "POST", userDetail)
         .then((response) => {
             if (response.status === "success") {
                 setError(false);
@@ -120,4 +103,4 @@ const Register = () => {
     )
 }
 
-export default Register;
+export default withGuest(Register);

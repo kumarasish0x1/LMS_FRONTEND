@@ -1,6 +1,7 @@
 import './index.css';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
+import withGuest from '../../hocs/withGuest';
 
 const Home = () => {
     return (
@@ -14,4 +15,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default withGuest(Home);

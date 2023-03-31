@@ -10,31 +10,14 @@ import { Button, Input, Form } from 'antd';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
-
-// need to have a separate location
-async function postData(url = '', data = {}) {
-    const response = await fetch(url, {
-      method: 'POST',
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer',
-      body: JSON.stringify(data)
-    });
-
-    let responseCode = await response.json()
-    return responseCode;
-}
+import withGuest from '../../hocs/withGuest';
+import fetchAPI from "../../utils/api";
 
 const Login = () => {
     let [error, setError] = useState(false);
 
     const onFinish = (userDetail) => {
-        postData('http://localhost:8000/user/login', userDetail)
+        fetchAPI('/auth/login', "POST", userDetail)
         .then((response) => {
             if (response.status === "success") {
                 window.location.href = "/profile";
@@ -101,4 +84,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default withGuest(Login);

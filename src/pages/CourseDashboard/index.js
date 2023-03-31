@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
 import { Layout, Col, Row } from 'antd';
-import VideoPlayer from './components/VideoPlayer';
-import SideBar from './components/SideBar';
+import VideoPlayer from '../../components/CourseDashboard/VideoPlayer';
+import SideBar from '../../components/CourseDashboard/SideBar';
 import { HeatMapOutlined } from '@ant-design/icons';
-import Loading from '../../components/Loading';
+import Loading from '../../components/common/Loading';
 
 import { getVideoDetails } from '../../services/videoDetails';
 import './index.css';
