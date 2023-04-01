@@ -20,6 +20,12 @@ const handleLogout = async () => {
   }
 };
 
+const onClick = ({ key }) => {
+  if (key === '3') {
+    handleLogout();
+  }
+};
+
 const items = [
   {
     label: (
@@ -38,6 +44,9 @@ const items = [
     key: '2',
   },
   {
+    type: 'divider',
+  },
+  {
     label: (
       <span>
         <PoweroffOutlined className="icon-with-margin" /> Logout
@@ -47,11 +56,11 @@ const items = [
   },
 ];
 
-const Header = () => (
+const HeaderComponent = () => (
   <div className='header-container'>
     <h1>LMS</h1>
     <div className="dropdown-container">
-      <Dropdown menu={{ items, onClick: handleLogout }} trigger={['click']}>
+      <Dropdown menu={{ items, onClick }} trigger={['click']}>
         <a onClick={(e) => e.preventDefault()}>
         <Space>
             <span className="name-placeholder">Asish Kumar Samantaray</span>
@@ -66,4 +75,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default HeaderComponent;
