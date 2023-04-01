@@ -1,6 +1,7 @@
 .ant-layout-header {
     height: 50px !important;
-    color: #fff !important;
+    background-color: #fff !important;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .header-container {
@@ -14,11 +15,12 @@
 
 .header-container h1 {
     margin: 0;
+    color: #464c4f;
 }
 
 .name-placeholder {
     margin-right: 4px;
-    color: #fff;
+    color: #464c4f;
   }
   
 .user-icon-container {
@@ -28,7 +30,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #119ff1;
+    background-color: #3bafda;
     color: #fff;
     margin-left: 4px;
 }
@@ -39,10 +41,10 @@
 
 .custom-icon {
     margin-bottom: 2px;
-    border: solid #fff;
+    border: solid #464c4f;
     border-width: 0 1px 1px 0;
     display: inline-block;
-    padding: 3px;
+    padding: 2.5px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
@@ -51,7 +53,10 @@
     display: flex;
     align-items: center;
 }
-  
+
+.icon-with-margin {
+    margin-right: 8px;
+}
   
   
   

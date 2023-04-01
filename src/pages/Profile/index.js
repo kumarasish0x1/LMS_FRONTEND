@@ -1,12 +1,12 @@
 import React from 'react';
 import MainLayout from '../../components/common/MainLayout';
 import HeaderComponent from '../../components/common/Header';
+import withAuthenticatedUser from '../../hocs/withAuthenticatedUser';
 
 const Profile = () => {
   const mainContent = (
     <div>
-      {/* Your main content goes here */}
-      <p>This is the main content of the website.</p>
+      
     </div>
   );
 
@@ -18,4 +18,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default withAuthenticatedUser(Profile);
