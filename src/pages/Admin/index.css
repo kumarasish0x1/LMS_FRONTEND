@@ -1,0 +1,25 @@
+.add-user {
+    background-color: #0056d2;
+    margin-bottom: 12px;
+}
+
+.add-user:hover {
+    background-color: rgba(4, 90, 4, 0.788) !important;
+}
+
+.user-details {
+    width: 100%;
+}
+
+.user-details .ant-table-row:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  .user-details .ant-table-thead > tr > th {
+    background-color: #003366; /* Set the desired background color for the table header */
+    color: #ffffff; /* Set the desired text color for the table header */
+  }
+
+  .user-details .ant-table-cell {
+    border-bottom: 1px solid #d9d9d9;
+  }

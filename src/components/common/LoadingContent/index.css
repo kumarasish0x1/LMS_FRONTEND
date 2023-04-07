@@ -1,0 +1,55 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px);
+    width: 100vw;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fetching-data {
+    animation: fadeIn 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes dotBounce {
+    0%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .dot {
+    animation: dotBounce 1s infinite ease-in-out;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #2c3e50;
+  }
+  
+ 
+.dot:nth-child(1) {
+    /* color: #3498db; */
+  }
+  
+  .dot:nth-child(2) {
+    /* color: #1abc9c; */
+    animation-delay: 0.2s;
+  }
+  
+  .dot:nth-child(3) {
+    /* color: #9b59b6; */
+    animation-delay: 0.4s;
+  }
+  

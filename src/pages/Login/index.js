@@ -20,7 +20,7 @@ const Login = () => {
         fetchAPI('/auth/login', "POST", userDetail)
         .then((response) => {
             if (response.status === "success") {
-                window.location.href = "/profile";
+                window.location.href = "/admin";
                 console.log(response);
             } else {
                 throw new Error(response.message);

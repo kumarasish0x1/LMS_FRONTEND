@@ -1,0 +1,15 @@
+.ant-menu {
+    margin-top: 18px;
+}
+
+.ant-menu-item-selected {
+    border-radius: 4px !important;
+    background-color: #0056d2 !important;
+}
+
+.inner-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start !important;
+}

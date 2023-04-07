@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Profile from './pages/Profile';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/register" element={<Register />} />
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/profile" element={<Profile />} />
+      <Route exact path="/admin" element={<Admin />} />
     </Routes>
   );
 }

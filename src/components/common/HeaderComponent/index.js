@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 import { 
   UserOutlined, 
@@ -29,9 +30,9 @@ const onClick = ({ key }) => {
 const items = [
   {
     label: (
-      <span>
+      <Link to="/profile">
         <UserOutlined className="icon-with-margin" /> Profile
-      </span>
+      </Link>
     ),
     key: '1',
   },
@@ -56,23 +57,26 @@ const items = [
   },
 ];
 
-const HeaderComponent = () => (
-  <div className='header-container'>
-    <h1>LMS</h1>
-    <div className="dropdown-container">
-      <Dropdown menu={{ items, onClick }} trigger={['click']}>
-        <a onClick={(e) => e.preventDefault()}>
-        <Space>
-            <span className="name-placeholder">Asish Kumar Samantaray</span>
-            <span className="custom-icon"></span>
-            <div className="user-icon-container">
-                <UserOutlined className="user-icon" />
-        </div>
-        </Space>
-        </a>
-      </Dropdown>
+const HeaderComponent = (props) => {
+  let { userName } = props;
+  return (
+    <div className='header-container'>
+      <Link to="/admin"><h1>LMS</h1></Link>
+      <div className="dropdown-container">
+        <Dropdown menu={{ items, onClick }} trigger={['click']}>
+          <a onClick={(e) => e.preventDefault()}>
+          <Space>
+              <span className="name-placeholder">{userName}</span>
+              <span className="custom-icon"></span>
+              <div className="user-icon-container">
+                  <UserOutlined className="user-icon" />
+          </div>
+          </Space>
+          </a>
+        </Dropdown>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default HeaderComponent;
