@@ -20,6 +20,30 @@
     color: #ffffff; /* Set the desired text color for the table header */
   }
 
-  .user-details .ant-table-cell {
-    border-bottom: 1px solid #d9d9d9;
-  }
+.user-details .ant-table-row .ant-table-cell-row-hover {
+    background-color:  #cce5ff !important;
+}
+
+.user-details .ant-table-row * {
+    border-radius: 0 !important;
+}
+
+.user-details .ant-table-row .action-button {
+    border-radius: 4px !important;
+}
+
+.ant-menu {
+    margin-top: 18px;
+}
+
+.ant-menu-item-selected {
+    border-radius: 4px !important;
+    background-color: #0056d2 !important;
+}
+
+.inner-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start !important;
+}

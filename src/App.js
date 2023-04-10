@@ -10,14 +10,14 @@ import Admin from './pages/Admin';
 
 function App() {
   return (
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/dashboard" element={<CourseDashboard />} />
-      <Route exact path="/register" element={<Register />} />
-      <Route exact path="/login" element={<Login />} />
-      <Route exact path="/profile" element={<Profile />} />
-      <Route exact path="/admin" element={<Admin />} />
-    </Routes>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/dashboard" element={<CourseDashboard />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/profile" element={<Profile />} />
+        <Route exact path="/admin" element={<Admin />} />
+      </Routes>
   );
 }
 

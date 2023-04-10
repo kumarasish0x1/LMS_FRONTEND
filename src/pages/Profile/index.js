@@ -22,7 +22,7 @@ const Profile = () => {
       setUserEmail(response.data.user.UserEmail);
       setTimeout(() => {
         setIsLoading(false);
-    }, 5000);
+    }, 3000);
     } catch (error) {
       message.error('Error fetching user profile');
     }
