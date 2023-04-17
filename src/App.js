@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
+import CourseManagement from './pages/CourseManagement';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/admin" element={<Admin />} />
+        <Route exact path="/course-management" element={<CourseManagement />} />
       </Routes>
   );
 }
