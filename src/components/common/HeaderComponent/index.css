@@ -57,6 +57,9 @@
 .icon-with-margin {
     margin-right: 8px;
 }
-  
-  
-  
+
+.lms-beta {
+    position: absolute;
+    top: -3px;
+    margin-left: 8px;
+}

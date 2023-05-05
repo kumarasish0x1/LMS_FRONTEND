@@ -1,0 +1,75 @@
+.outer-div {
+    background-color: #f2f6fd;
+    min-height: calc(100vh - 50px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .enroll-btn {
+        background-color: #ee414d;
+        color: #fff;
+        margin-left: 5px;
+        width: 100%;
+        margin: 0 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 2px;
+    }
+    
+    .ant-btn.enroll-btn:hover {
+        color: #fff;
+        border: 1px solid #a01c24;
+        background-color: #a01c24;
+    }
+
+    .course-enrollment-container {
+        display: flex;
+        background-color: #fff;
+        width: 50%;
+        margin-top: 100px;
+        border-radius: 5px;
+
+        .left-div {
+            width: 80%;
+            min-height: 150px;
+
+            .enroll-course-name {
+                font-size: 22px;
+                font-weight: 500;
+                padding: 20px 40px;
+                padding-bottom: 2px;
+                color: rgb(31, 31, 31);
+            }
+
+            .enroll-course-description {
+                font-size: 11px;
+                font-weight: 500;
+                padding: 20px 40px;
+                letter-spacing: 0.7px;
+                padding-top: 6px;
+                color: rgb(99, 99, 99);
+            }
+        }
+
+        .right-div {
+            border-left: 1px solid #e0e0e0;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+    .ant-btn.go-to-course-btn {
+        background-color: #00419e;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .ant-btn.go-to-course-btn:hover {
+        color: #fff;
+        border: 1px solid #043477;
+        background-color: #043477;
+    }
+}

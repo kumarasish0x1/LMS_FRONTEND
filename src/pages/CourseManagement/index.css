@@ -61,8 +61,10 @@ main.ant-layout-content .course-management-wrapper {
     height: 200px;
     cursor: pointer;
     padding-left: 20px !important;
-    border: 2px solid #f0f2f3;
-    border-left: 4px solid #0056d2;
+    border: 2px solid #287aa3;
+    border-left: 96px solid #287aa3;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .course-title {
@@ -115,11 +117,11 @@ body::-webkit-scrollbar {
     width: 0.5em; /* adjust the width to your liking */
   }
   
-  body::-webkit-scrollbar-thumb {
-    background-color: #d2d2d2; /* adjust the color to your liking */
-    border-radius: 1em; /* adjust the border radius to your liking */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background-color: #f7eee5; /* adjust the color to match your container background */
-  }
+body::-webkit-scrollbar-thumb {
+background-color: #d2d2d2; /* adjust the color to your liking */
+border-radius: 1em; /* adjust the border radius to your liking */
+}
+
+body::-webkit-scrollbar-track {
+background-color: #f7eee5; /* adjust the color to match your container background */
+}
