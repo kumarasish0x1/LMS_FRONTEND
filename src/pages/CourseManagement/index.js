@@ -8,7 +8,7 @@ import EditCourse from '../../components/CourseManagement/EditCourse';
 import { useCurrentUserContext } from '../../providers/CurrentUserProvider';
 import LoadingContent from '../../components/common/LoadingContent';
 import { Link } from "react-router-dom";
-import './index.css';
+import './index.scss';
 
 const CourseManagement = () => {
     const { currentUser } = useCurrentUserContext();

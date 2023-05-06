@@ -9,6 +9,7 @@ import VideoPlayerWithContentList from '../VideoPlayerWithContentList';
 
 const CourseContent = () => {
     const [sections, setSections] = useState([]);
+    const [currentSection, setCurrentSection] = useState(null);
     const [showContent, setShowContent] = useState(false);
     const { courseId } = useParams();
 
@@ -21,8 +22,9 @@ const CourseContent = () => {
         }
     };
 
-    const showContentPage = () => {
+    const showContentPage = (section) => {
         setShowContent(true);
+        setCurrentSection(section);
     }
 
     useEffect(() => {
@@ -32,7 +34,7 @@ const CourseContent = () => {
     console.log("Section: ", sections);
 
     if (showContent) {
-        return <VideoPlayerWithContentList />
+        return <VideoPlayerWithContentList section={currentSection} />
     }
 
     return (

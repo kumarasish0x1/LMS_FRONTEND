@@ -28,7 +28,7 @@
             }
 
             .content-section-header {
-                font-size: 22px;
+                font-size: 18px;
             }
 
             .content-section-progress {
@@ -47,6 +47,11 @@
                 padding-bottom: 12px;
                 border-bottom: 1px solid rgba(42, 115, 204, 0.4);
                 cursor: pointer;
+            }
+            
+            .content-active {
+                background-color: rgba(42, 115, 204, 0.2);
+                border-left: 4px solid rgba(24, 90, 169, 1);;
             }
 
             .content:hover {

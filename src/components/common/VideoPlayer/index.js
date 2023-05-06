@@ -1,16 +1,17 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
+import './index.scss'
 
-const VideoPlayer = ({ videoId }) => {
+function VideoPlayer({ url }) {
   return (
-    <div>
-      <iframe
-        src={`https://www.youtube.com/embed/${videoId}`}
-        width="500"
-        height="300"
-        allowfullscreen
-      ></iframe>
-    </div>
+      <ReactPlayer
+        className='react-player'
+        url={url}
+        width='100%'
+        height='100%'
+        controls={true}
+      />
   );
-};
+}
 
 export default VideoPlayer;
