@@ -16,7 +16,7 @@
   }
 
   .user-details .ant-table-thead > tr > th {
-    background-color: #003366; /* Set the desired background color for the table header */
+    background-color: rgba(1, 19, 46, 0.6039215686); /* Set the desired background color for the table header */
     color: #ffffff; /* Set the desired text color for the table header */
   }
 
@@ -46,4 +46,8 @@
     display: flex;
     flex-direction: column;
     justify-content: start !important;
+
+    .action-button {
+        font-size: 12px;
+    }
 }

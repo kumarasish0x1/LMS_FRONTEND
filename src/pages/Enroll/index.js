@@ -62,8 +62,8 @@ const Enroll = () => {
         try {
             const [courseData, userData] = await Promise.all([fetchCourse(), fetchUser()]);
             setCourse(courseData);
-            setUser(userData.userId);
-            checkAccess(userData.userId);
+            setUser(userData.user.userId);
+            checkAccess(userData.user.userId);
         } catch (error) {
             console.error('Error fetching data:', error);
         }

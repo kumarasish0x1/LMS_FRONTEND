@@ -7,7 +7,7 @@ import LoadingContent from '../../components/common/LoadingContent';
 import MainLayout from '../../components/common/MainLayout';
 import AddUser from '../../components/Admin/AddUser';
 import EditUser from '../../components/Admin/EditUser';
-import './index.css'
+import './index.scss'
 const { Sider, Content } = Layout;
 
 function getItem(label, key, icon, children) {
@@ -114,9 +114,7 @@ const Admin = (props) => {
         });
       
           setData(formattedData);
-          setTimeout(() => {
-            setLoading(false);
-          }, 3000);
+          setLoading(false);
         } catch (error) {
           console.error('Error fetching user data');
         }

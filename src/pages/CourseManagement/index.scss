@@ -8,7 +8,6 @@
 main.ant-layout-content .course-management-wrapper {
     width: 100%;
     display: block;
-    background-color: #f7eee5;
     height: auto;
     padding-bottom: 50px;
     min-height: calc(100vh - 50px);
@@ -27,6 +26,8 @@ main.ant-layout-content .course-management-wrapper {
     .add-course-section {
         margin-top: 10px;
         padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
     }
     
     .filter-course input {
@@ -45,29 +46,43 @@ main.ant-layout-content .course-management-wrapper {
     
     .course-container {
         padding: 0 10px;
-        max-width: 1200px;
         display: flex;
         justify-content: center;
         margin: 0 auto !important;
         text-align: center;
         overflow-y: auto;
+        background-color: #f5f5f5;
+        padding: 20px 70px;
+        overflow: hidden;
     }
     
     .course-item {
         border-radius: 4px;
         margin: 0 20px;
         background-color: #fff;
-        height: 200px;
         cursor: pointer;
-        padding-left: 20px !important;
-        border: 2px solid #287aa3;
-        border-left: 96px solid #287aa3;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-left: 25px solid rgba(1, 19, 46, 0.6039215686);
+        border-radius: 7px;
+        padding: 0 !important;
+    }
+
+    .course-item:hover {
+        border-color: #04439f;
+        border-radius: 7px;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+
+        .course-item-container {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .course-item-container {
+        padding: 10px;
+        padding-left: 25px;
     }
     
     .course-title {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
         color: #464c4f;
         margin-top: 10px;
@@ -76,18 +91,21 @@ main.ant-layout-content .course-management-wrapper {
     
     .course-category {
         font-weight: 600;
-        background-color: #ffe7d8;
+        font-size: 10px;
+        background-color: #edeeee;
         color: #f1696f;
-        padding: 5px 10px;
+        padding: 3px 8px;
         padding-bottom: 7px;
         border-radius: 2px;
         display: block;
         width: fit-content;
+        padding-bottom: 3px;
     }
     
     .course-description {
         padding: 10px 5px;
         text-align: left;
+        font-size: 11px;
     }
     
     .manage-course {

@@ -35,7 +35,7 @@ const CourseManagement = () => {
         fetchCourses();
     }
 
-    const handleCourseEdited = () => { 
+    const handleCourseEdited = () => {
         fetchCourses();
     }
 
@@ -57,7 +57,7 @@ const CourseManagement = () => {
         }
         setLoading(false);
     };
-    
+
 
     const filteredCourses = courses.filter(course =>
         course.CourseTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -94,7 +94,7 @@ const CourseManagement = () => {
     }
 
     if (showEditCourse && selectedCourseId) {
-        return <EditCourse  courseId={selectedCourseId} toggleEditCourse={toggleEditCourse} onCourseEdited={handleCourseEdited} />
+        return <EditCourse courseId={selectedCourseId} toggleEditCourse={toggleEditCourse} onCourseEdited={handleCourseEdited} />
     }
 
     if (showAddCourse) {
@@ -112,69 +112,72 @@ const CourseManagement = () => {
     return (
         <MainLayout>
             <div className="course-management-wrapper">
-            <div className="sticky-container">
-                <Row>
-                    <Col span={24} className="course-management-header">
-                        <h1>Course Management</h1>
-                    </Col>
-                </Row>
-                <Row className="add-course-section">
-                    <Col span={2} className="add-course-button">
-                        <Button 
-                            type="primary"
-                            onClick={toggleAddCourse}
-                        >
-                            Add Course
-                        </Button>
-                    </Col>
-                    <Col span={8} className="filter-course">
-                        <input type="text" placeholder="Search a course" onChange={handleSearch} />
-                    </Col>
-                </Row>
-            </div>
-            <Row gutter={[16, 16]} className="course-container">
-                {filteredCourses.map((course, index) => {
-                    return (
-                        <Col 
-                            key={index}
-                            xs={24} sm={24} md={11} lg={11} xl={11} 
-                            className="course-item">
-                            <div className="manage-course">
-                                <Link to={`/instructor/courses/${course.CourseID}/sections`}>
-                                    <Button 
-                                        icon={<EyeOutlined />} 
-                                        type="default" 
-                                        className="action-button"
-                                    >
-                                        View
-                                    </Button>
-                                </Link>
-                                <Button 
-                                    icon={<EditOutlined />} 
-                                    type="primary" 
-                                    className="action-button"
-                                    onClick={() => editCourse(course.CourseID)}
-                                >
-                                    Edit
-                                </Button>    
-                                <Button 
-                                    icon={<DeleteOutlined />} 
-                                    type="primary"
-                                    danger 
-                                    className="action-button delete-button"
-                                    onClick={() => showDeleteConfirm(course.CourseID)}
-                                >
-                                    Delete
-                                </Button>  
-                            </div>
-                            <h3 className="course-title">{course.CourseTitle}</h3>
-                            <div className="course-category">{course.CourseCategory}</div>
-                            <div className="course-description">{course.CourseDescription}</div>
+                <div className="sticky-container">
+                    <Row>
+                        <Col span={24} className="course-management-header">
+                            <h1>Course Management</h1>
                         </Col>
-                    );
-                }
-            )}
-            </Row>
+                    </Row>
+                    <Row className="add-course-section">
+                        <Col span={2} className="add-course-button">
+                            <Button
+                                type="primary"
+                                onClick={toggleAddCourse}
+                            >
+                                Add Course
+                            </Button>
+                        </Col>
+                        <Col span={5} className="filter-course">
+                            <input type="text" placeholder="Search a course" onChange={handleSearch} />
+                        </Col>
+                    </Row>
+                </div>
+                <Row gutter={[16, 16]} className="course-container">
+                    {filteredCourses.map((course, index) => {
+                        return (
+                            <Col
+                                key={index}
+                                xs={24} sm={24} md={24} lg={24} xl={24}
+                                className="course-item"
+                            >
+                                <div className="course-item-container">
+                                    <div className="manage-course">
+                                        <Link to={`/instructor/courses/${course.CourseID}/sections`}>
+                                            <Button
+                                                icon={<EyeOutlined />}
+                                                type="default"
+                                                className="action-button"
+                                            >
+                                                View
+                                            </Button>
+                                        </Link>
+                                        <Button
+                                            icon={<EditOutlined />}
+                                            type="primary"
+                                            className="action-button"
+                                            onClick={() => editCourse(course.CourseID)}
+                                        >
+                                            Edit
+                                        </Button>
+                                        <Button
+                                            icon={<DeleteOutlined />}
+                                            type="primary"
+                                            danger
+                                            className="action-button delete-button"
+                                            onClick={() => showDeleteConfirm(course.CourseID)}
+                                        >
+                                            Delete
+                                        </Button>
+                                    </div>
+                                    <h3 className="course-title">{course.CourseTitle}</h3>
+                                    <div className="course-category">{course.CourseCategory}</div>
+                                    <div className="course-description">{course.CourseDescription}</div>
+                                </div>
+                            </Col>
+                        );
+                    }
+                    )}
+                </Row>
             </div>
         </MainLayout>
     )

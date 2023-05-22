@@ -191,15 +191,17 @@ const ContentManagement = () => {
                         <Col span={24} className="content-management-header">
                             <h1>Content Management</h1>
                             <h3 className="course-section">Course - {course.CourseTitle}</h3>
-                            <span className="stylish-slash">/</span>
+                            <span className="stylish-slash"></span>
                             <h3 className="section-content">{section.SectionTitle}</h3>
-                            <Link to={`/instructor/courses/${courseId}/sections`} className="back-button">
-                                <Button
-                                    type="primary"
-                                >
-                                    Back to Section Management
-                                </Button>
-                            </Link>
+                            <div className="back-button">
+                                <Link to={`/instructor/courses/${courseId}/sections`}>
+                                    <Button
+                                        type="primary"
+                                    >
+                                        Back to Section Management
+                                    </Button>
+                                </Link>
+                                </div>
                         </Col>
                     </Row>
                     <Row className="add-section-content">

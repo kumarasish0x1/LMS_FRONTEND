@@ -20,9 +20,7 @@ const Profile = () => {
       const response = await fetchAPI('/users/profile');
       setUserName(response.data.user.UserName);
       setUserEmail(response.data.user.UserEmail);
-      setTimeout(() => {
-        setIsLoading(false);
-    }, 3000);
+      setIsLoading(false);
     } catch (error) {
       message.error('Error fetching user profile');
     }

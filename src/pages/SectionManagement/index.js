@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import MainLayout from "../../components/common/MainLayout";
 import { Link, useParams } from "react-router-dom";
 import fetchAPI from "../../utils/api";
-import './index.css';
+import './index.scss';
 import LoadingContent from "../../components/common/LoadingContent";
 import AddSection from "../../components/SectionManagement/AddSection";
 import EditSection from "../../components/SectionManagement/EditSection";
@@ -210,7 +210,7 @@ const SectionManagement = () => {
                         </Col>
                     </Row>
                     <Row className="add-course-section">
-                        <Col span={2} className="add-course-button">
+                        <Col span={2} className="add-section-button">
                             <Button 
                                 type="primary"
                                 onClick={toggleAddSection}

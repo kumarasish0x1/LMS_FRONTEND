@@ -20,8 +20,13 @@ const Login = () => {
         fetchAPI('/auth/login', "POST", userDetail)
         .then((response) => {
             if (response.status === "success") {
-                window.location.href = "/admin";
-                console.log(response);
+                if (response.user.userRole === 1) {
+                    window.location.href = "/admin";
+                } else if (response.user.userRole === 2) {
+                    window.location.href = "/instructor/courses";
+                } else if (response.user.userRole === 3) {
+                    window.location.href = "/course-catalog";
+                }
             } else {
                 throw new Error(response.message);
             }

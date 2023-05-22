@@ -1,0 +1,17 @@
+.access-denied {
+    color: #6b6b6b7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+
+    .lock-icon {
+        margin-right: 12px;
+        font-size: 37px;
+        margin-top: 5px;
+    }
+}
